@@ -1,58 +1,1289 @@
-<!-- EXPERIENCE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<section id="experience">
+    <title>Isiah Agus | Civil Engineering Portfolio</title>
 
-    <div class="section-number">
-        // EXPERIENCE / 002
-    </div>
+    <style>
 
-    <h2 class="section-title">
-        EXPERIENCE
-    </h2>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #050505;
+            color: #e8e8e8;
+            font-family: "Courier New", monospace;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: rgba(5, 5, 5, 0.92);
+            border-bottom: 1px solid #222;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 18px 7%;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #666;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav a {
+            color: #888;
+            font-size: 12px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
 
 
-    <div class="experience-item">
+        /* HERO */
 
-        <div class="experience-year">
-            ENGINEERING
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+
+            padding: 120px 7% 80px;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+
+            width: 550px;
+            height: 550px;
+
+            border: 1px solid #1d1d1d;
+            border-radius: 50%;
+
+            right: -180px;
+            top: 150px;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+
+            width: 350px;
+            height: 350px;
+
+            border: 1px solid #181818;
+            border-radius: 50%;
+
+            right: -80px;
+            top: 250px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .terminal {
+            color: #555;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+
+        .terminal span {
+            color: #aaa;
+        }
+
+        .hero h1 {
+            font-size: clamp(55px, 10vw, 130px);
+            line-height: 0.88;
+            letter-spacing: -6px;
+            margin-bottom: 30px;
+        }
+
+        .hero h1 span {
+            color: #666;
+        }
+
+        .hero-title {
+            font-size: 20px;
+            color: #aaa;
+            margin-bottom: 30px;
+        }
+
+        .hero-description {
+            max-width: 700px;
+            color: #777;
+            font-size: 15px;
+            font-family: Arial, sans-serif;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            border: 1px solid #555;
+            padding: 13px 22px;
+            font-size: 12px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: white;
+            color: black;
+        }
+
+        .button.primary {
+            background: white;
+            color: black;
+        }
+
+
+        /* SECTIONS */
+
+        section {
+            padding: 110px 7%;
+            border-top: 1px solid #181818;
+        }
+
+        .section-number {
+            color: #555;
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(35px, 6vw, 70px);
+            margin-bottom: 50px;
+            letter-spacing: -3px;
+        }
+
+
+        /* PROFILE */
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .profile-photo {
+            position: relative;
+        }
+
+        .profile-photo::before {
+            content: "PROFILE // 001";
+
+            position: absolute;
+
+            top: -12px;
+            left: -12px;
+
+            color: #555;
+            font-size: 10px;
+
+            background: #050505;
+            padding: 3px 8px;
+
+            z-index: 2;
+        }
+
+        .profile-photo img {
+            width: 320px;
+            height: 400px;
+
+            object-fit: cover;
+
+            display: block;
+
+            border: 1px solid #333;
+
+            filter: grayscale(15%);
+
+            transition: 0.4s ease;
+        }
+
+        .profile-photo img:hover {
+            filter: grayscale(0%);
+            transform: translateY(-5px);
+            border-color: #777;
+        }
+
+        .profile-photo::after {
+            content: "";
+
+            position: absolute;
+
+            right: -10px;
+            bottom: -10px;
+
+            width: 70px;
+            height: 70px;
+
+            border-right: 1px solid #555;
+            border-bottom: 1px solid #555;
+        }
+
+        .profile-text {
+            color: #888;
+
+            max-width: 700px;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 16px;
+        }
+
+        .profile-text p {
+            margin-bottom: 22px;
+        }
+
+
+        /* STATS */
+
+        .stats {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 15px;
+
+            margin-top: 35px;
+        }
+
+        .stat {
+            border: 1px solid #222;
+            padding: 25px;
+            transition: 0.3s;
+        }
+
+        .stat:hover {
+            border-color: #555;
+        }
+
+        .stat-number {
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 10px;
+        }
+
+
+        /* EXPERIENCE */
+
+        .experience-item {
+            border-top: 1px solid #222;
+
+            padding: 30px 0;
+
+            display: grid;
+
+            grid-template-columns: 180px 1fr;
+
+            gap: 30px;
+        }
+
+        .experience-year {
+            color: #555;
+            font-size: 12px;
+        }
+
+        .experience-content h3 {
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+
+        .experience-content ul {
+            list-style: none;
+            color: #777;
+            font-family: Arial, sans-serif;
+        }
+
+        .experience-content li {
+            margin-bottom: 14px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .experience-content li::before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            color: #aaa;
+        }
+
+
+        /* SKILLS */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            border: 1px solid #333;
+            padding: 13px 18px;
+            color: #999;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            background: white;
+            color: black;
+        }
+
+
+        /* EDUCATION */
+
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin-left: 20px;
+        }
+
+        .timeline::before {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            top: 0;
+            bottom: 0;
+
+            width: 1px;
+
+            background: #333;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 0 0 55px 45px;
+        }
+
+        .timeline-item::before {
+            content: "";
+
+            position: absolute;
+
+            left: -5px;
+            top: 5px;
+
+            width: 10px;
+            height: 10px;
+
+            background: #050505;
+
+            border: 1px solid #aaa;
+
+            border-radius: 50%;
+        }
+
+        .timeline-date {
+            color: #555;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item h4 {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .timeline-item ul {
+            color: #777;
+            font-family: Arial, sans-serif;
+            list-style: none;
+        }
+
+        .timeline-item li {
+            margin-bottom: 7px;
+            padding-left: 18px;
+            position: relative;
+        }
+
+        .timeline-item li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #999;
+        }
+
+
+        /* ACHIEVEMENTS */
+
+        .achievement {
+            border-bottom: 1px solid #222;
+
+            padding: 25px 0;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+        .achievement h3 {
+            font-size: 18px;
+        }
+
+        .achievement p {
+            color: #666;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 13px;
+
+            max-width: 750px;
+        }
+
+        .achievement-number {
+            color: #555;
+        }
+
+
+        /* CONTACT */
+
+        .contact {
+            min-height: 70vh;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+        }
+
+        .contact h2 {
+            font-size: clamp(40px, 8vw, 100px);
+
+            letter-spacing: -4px;
+
+            line-height: 0.95;
+
+            max-width: 900px;
+        }
+
+        .contact-info {
+            margin-top: 50px;
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 30px;
+
+            color: #777;
+        }
+
+        .contact-info a:hover {
+            color: white;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid #222;
+
+            padding: 30px 7%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            color: #555;
+
+            font-size: 12px;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                padding: 120px 5% 70px;
+            }
+
+            .hero h1 {
+                font-size: 65px;
+                letter-spacing: -3px;
+            }
+
+            section {
+                padding: 80px 5%;
+            }
+
+            .profile-grid {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .profile-photo {
+                width: 100%;
+
+                display: flex;
+
+                justify-content: center;
+            }
+
+            .profile-photo img {
+                width: min(320px, 90vw);
+                height: 390px;
+            }
+
+            .stats {
+                margin-top: 20px;
+            }
+
+            .experience-item {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .timeline {
+                margin-left: 10px;
+            }
+
+            .achievement {
+                flex-direction: column;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <div class="logo">
+            ISIAH<span>_AGUS</span>
         </div>
 
-        <div class="experience-content">
+        <ul>
 
-            <h3>
-                Field & Technical Experience
-            </h3>
+            <li><a href="#profile">PROFILE</a></li>
 
-            <ul>
+            <li><a href="#experience">EXPERIENCE</a></li>
 
-                <li>
-                    Joined engineers during site visits to observe
-                    ongoing canal and road construction, as well as
-                    structural maintenance work.
-                </li>
+            <li><a href="#skills">SKILLS</a></li>
 
-                <li>
-                    Practiced creating 2D structural layouts, canal
-                    cross-sections, and site plan modifications in
-                    AutoCAD based on actual engineering requirements.
-                </li>
+            <li><a href="#education">EDUCATION</a></li>
 
-                <li>
-                    Reviewed technical drawings and topographic maps
-                    to better understand how plans correspond to
-                    actual site conditions and measurements.
-                </li>
+            <li><a href="#achievements">ACHIEVEMENTS</a></li>
 
-                <li>
-                    Observed safety practices, surveying procedures,
-                    and the documentation process used in public
-                    works projects.
-                </li>
+            <li><a href="#contact">CONTACT</a></li>
 
-            </ul>
+        </ul>
+
+    </nav>
+
+
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="terminal">
+
+                &gt; SYSTEM STATUS:
+
+                <span>ONLINE</span>
+
+            </div>
+
+
+            <h1>
+
+                ISIAH<br>
+
+                <span>AGUS</span>
+
+            </h1>
+
+
+            <div class="hero-title">
+
+                CIVIL ENGINEERING STUDENT
+
+            </div>
+
+
+            <p class="hero-description">
+
+                A dedicated Civil Engineering student with a strong STEM
+                background, a passion for problem-solving, and an interest
+                in structural design and real-world engineering applications.
+
+            </p>
+
+
+            <div class="buttons">
+
+                <a href="#profile" class="button primary">
+
+                    ENTER PORTFOLIO
+
+                </a>
+
+
+                <a href="#contact" class="button">
+
+                    CONTACT ME
+
+                </a>
+
+            </div>
 
         </div>
 
-    </div>
+    </header>
 
-</section>
+
+
+    <!-- PROFILE -->
+
+    <section id="profile">
+
+        <div class="section-number">
+
+            // PROFILE / 001
+
+        </div>
+
+
+        <h2 class="section-title">
+
+            PROFILE
+
+        </h2>
+
+
+        <div class="profile-grid">
+
+
+            <!-- YOUR PHOTO -->
+
+            <div class="profile-photo">
+
+                <img
+                    src="profile.jpg"
+                    alt="Isiah Agus - Civil Engineering Student"
+                >
+
+            </div>
+
+
+            <!-- INTRODUCTION -->
+
+            <div class="profile-text">
+
+                <p>
+
+                    I am a dedicated Civil Engineering student at Isabela
+                    State University with a strong STEM background and a
+                    consistent drive to grow academically and professionally.
+
+                </p>
+
+
+                <p>
+
+                    I enjoy solving problems, understanding how structures
+                    are designed, and applying what I learn to real-world
+                    engineering situations.
+
+                </p>
+
+
+                <p>
+
+                    I am detail-oriented, analytical, and eager to learn,
+                    with a strong commitment to doing my best in both
+                    academic work and team projects.
+
+                </p>
+
+
+                <div class="stats">
+
+                    <div class="stat">
+
+                        <div class="stat-number">
+                            BSCE
+                        </div>
+
+                        <div class="stat-label">
+                            CIVIL ENGINEERING
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-number">
+                            STEM
+                        </div>
+
+                        <div class="stat-label">
+                            ACADEMIC BACKGROUND
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-number">
+                            2025
+                        </div>
+
+                        <div class="stat-label">
+                            STARTED BSCE
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-number">
+                            ∞
+                        </div>
+
+                        <div class="stat-label">
+                            WILLINGNESS TO LEARN
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- EXPERIENCE -->
+
+    <section id="experience">
+
+        <div class="section-number">
+            // EXPERIENCE / 002
+        </div>
+
+        <h2 class="section-title">
+            EXPERIENCE
+        </h2>
+
+
+        <div class="experience-item">
+
+            <div class="experience-year">
+                ENGINEERING
+            </div>
+
+            <div class="experience-content">
+
+                <h3>
+                    Field & Technical Experience
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Joined engineers during site visits to observe
+                        ongoing canal and road construction, as well as
+                        structural maintenance work.
+                    </li>
+
+                    <li>
+                        Practiced creating 2D structural layouts, canal
+                        cross-sections, and site plan modifications in
+                        AutoCAD based on actual engineering requirements.
+                    </li>
+
+                    <li>
+                        Reviewed technical drawings and topographic maps
+                        to better understand how plans correspond to
+                        actual site conditions and measurements.
+                    </li>
+
+                    <li>
+                        Observed safety practices, surveying procedures,
+                        and the documentation process used in public
+                        works projects.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <div class="section-number">
+            // CAPABILITIES / 003
+        </div>
+
+        <h2 class="section-title">
+            CAPABILITIES
+        </h2>
+
+
+        <div class="skills">
+
+            <div class="skill">COMMUNICATION</div>
+
+            <div class="skill">CRITICAL THINKING</div>
+
+            <div class="skill">PROBLEM SOLVING</div>
+
+            <div class="skill">SITE INSPECTION</div>
+
+            <div class="skill">DOCUMENTATION</div>
+
+            <div class="skill">ORGANIZATION</div>
+
+            <div class="skill">TASK MANAGEMENT</div>
+
+            <div class="skill">AUTOCAD</div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- EDUCATION -->
+
+    <section id="education">
+
+        <div class="section-number">
+            // EDUCATION / 004
+        </div>
+
+        <h2 class="section-title">
+            EDUCATION
+        </h2>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-date">
+                    AUG 2025 — PRESENT
+                </div>
+
+                <h3>
+                    Isabela State University — Echague
+                </h3>
+
+                <h4>
+                    College of Engineering
+                </h4>
+
+                <ul>
+
+                    <li>
+                        Bachelor of Science in Civil Engineering (BSCE)
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-date">
+                    AUG 2023 — APR 2025
+                </div>
+
+                <h3>
+                    Palayan Region High School
+                </h3>
+
+                <h4>
+                    Senior High School Department — STEM
+                </h4>
+
+                <ul>
+
+                    <li>
+                        Science, Technology, Engineering, and Mathematics
+                        (STEM)
+                    </li>
+
+                    <li>
+                        Senior High School Diploma — April 2025
+                    </li>
+
+                    <li>
+                        With High Honors — 1st, 2nd, 3rd, and 4th Quarter,
+                        A.Y. 2024–2025
+                    </li>
+
+                    <li>
+                        With High Honors — 1st, 2nd, 3rd, and 4th Quarter,
+                        A.Y. 2023–2024
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-date">
+                    JUNE 2019 — JULY 2023
+                </div>
+
+                <h3>
+                    Palayan Region High School
+                </h3>
+
+                <h4>
+                    Junior High School
+                </h4>
+
+                <ul>
+
+                    <li>
+                        Junior High School Diploma — July 2023
+                    </li>
+
+                    <li>
+                        With Honors — A.Y. 2019–2020
+                    </li>
+
+                    <li>
+                        With Honors — A.Y. 2020–2021
+                    </li>
+
+                    <li>
+                        With Honors — A.Y. 2021–2022
+                    </li>
+
+                    <li>
+                        With Honors — A.Y. 2022–2023
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-date">
+                    JUNE 2013 — JUNE 2019
+                </div>
+
+                <h3>
+                    Bagnos Elementary School
+                </h3>
+
+                <h4>
+                    Elementary
+                </h4>
+
+                <ul>
+
+                    <li>
+                        Elementary Diploma — April 2019
+                    </li>
+
+                    <li>
+                        With Honors — A.Y. 2015–2016
+                    </li>
+
+                    <li>
+                        With Honors — A.Y. 2016–2017
+                    </li>
+
+                    <li>
+                        With Honors — A.Y. 2017–2018
+                    </li>
+
+                    <li>
+                        With Honors — A.Y. 2018–2019
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ACHIEVEMENTS -->
+
+    <section id="achievements">
+
+        <div class="section-number">
+            // ACHIEVEMENTS / 005
+        </div>
+
+        <h2 class="section-title">
+            ACHIEVEMENTS
+        </h2>
+
+
+        <div class="achievement">
+
+            <div>
+
+                <h3>
+                    Consistent Academic Achievement
+                </h3>
+
+                <p>
+                    Maintained strong academic performance throughout
+                    junior and senior high school.
+                </p>
+
+            </div>
+
+            <div class="achievement-number">
+                001
+            </div>
+
+        </div>
+
+
+        <div class="achievement">
+
+            <div>
+
+                <h3>
+                    With High Honors
+                </h3>
+
+                <p>
+                    Achieved With High Honors in all four quarters during
+                    A.Y. 2023–2024 and A.Y. 2024–2025.
+                </p>
+
+            </div>
+
+            <div class="achievement-number">
+                002
+            </div>
+
+        </div>
+
+
+        <div class="achievement">
+
+            <div>
+
+                <h3>
+                    With Honors
+                </h3>
+
+                <p>
+                    Consistently earned With Honors throughout junior
+                    high school from A.Y. 2019–2020 to 2022–2023.
+                </p>
+
+            </div>
+
+            <div class="achievement-number">
+                003
+            </div>
+
+        </div>
+
+
+        <div class="achievement">
+
+            <div>
+
+                <h3>
+                    Engineering Field Exposure
+                </h3>
+
+                <p>
+                    Gained practical exposure to construction, surveying,
+                    AutoCAD drafting, site inspection, and project
+                    documentation.
+                </p>
+
+            </div>
+
+            <div class="achievement-number">
+                004
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="contact">
+
+        <div class="section-number">
+            // CONTACT / 006
+        </div>
+
+
+        <h2>
+
+            LET'S BUILD<br>
+            SOMETHING<br>
+            MEANINGFUL.
+
+        </h2>
+
+
+        <div class="contact-info">
+
+            <a href="mailto:YOUR_EMAIL@gmail.com">
+                EMAIL
+            </a>
+
+            <a href="#">
+                LINKEDIN
+            </a>
+
+            <a href="#">
+                FACEBOOK
+            </a>
+
+        </div>
+
+
+        <div class="buttons">
+
+            <a
+                href="resume.pdf"
+                class="button primary"
+                download
+            >
+                DOWNLOAD RESUME
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div>
+            ISIAH_AGUS // PORTFOLIO
+        </div>
+
+        <div>
+            CIVIL ENGINEERING
+        </div>
+
+    </footer>
+
+
+</body>
+</html>
