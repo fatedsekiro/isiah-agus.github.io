@@ -7,6 +7,7 @@
     <title>Isiah Agus | Civil Engineering Portfolio</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -28,6 +29,7 @@
             color: inherit;
             text-decoration: none;
         }
+
 
         /* =========================
            NAVIGATION
@@ -75,6 +77,7 @@
         nav a:hover {
             color: white;
         }
+
 
         /* =========================
            HERO
@@ -156,6 +159,7 @@
             max-width: 700px;
             color: #777;
             font-size: 15px;
+            font-family: Arial, sans-serif;
         }
 
         .buttons {
@@ -182,6 +186,7 @@
             color: black;
         }
 
+
         /* =========================
            SECTIONS
         ========================= */
@@ -203,20 +208,94 @@
             letter-spacing: -3px;
         }
 
+
         /* =========================
            PROFILE
         ========================= */
 
         .profile-grid {
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
+
+            grid-template-columns: 320px 1fr;
+
             gap: 70px;
+
+            align-items: start;
         }
+
+        /* PROFILE PHOTO */
+
+        .profile-photo {
+            position: relative;
+        }
+
+        .profile-photo::before {
+            content: "PROFILE // 001";
+
+            position: absolute;
+
+            top: -12px;
+            left: -12px;
+
+            color: #555;
+
+            font-size: 10px;
+
+            background: #050505;
+
+            padding: 3px 8px;
+
+            z-index: 2;
+        }
+
+        .profile-photo img {
+            width: 320px;
+            height: 400px;
+
+            object-fit: cover;
+
+            display: block;
+
+            border: 1px solid #333;
+
+            filter: grayscale(15%);
+
+            transition: 0.4s ease;
+        }
+
+        .profile-photo img:hover {
+            filter: grayscale(0%);
+            transform: translateY(-5px);
+            border-color: #777;
+        }
+
+        /* PHOTO CORNER */
+
+        .profile-photo::after {
+            content: "";
+
+            position: absolute;
+
+            right: -10px;
+            bottom: -10px;
+
+            width: 70px;
+            height: 70px;
+
+            border-right: 1px solid #555;
+            border-bottom: 1px solid #555;
+        }
+
+
+        /* PROFILE TEXT */
 
         .profile-text {
             color: #888;
+
             max-width: 700px;
+
             font-family: Arial, sans-serif;
+
             font-size: 16px;
         }
 
@@ -224,26 +303,41 @@
             margin-bottom: 22px;
         }
 
+
+        /* PROFILE STATS */
+
         .stats {
             display: grid;
+
             grid-template-columns: repeat(2, 1fr);
+
             gap: 15px;
+
+            margin-top: 35px;
         }
 
         .stat {
             border: 1px solid #222;
-            padding: 30px;
+
+            padding: 25px;
+
+            transition: 0.3s;
+        }
+
+        .stat:hover {
+            border-color: #555;
         }
 
         .stat-number {
-            font-size: 38px;
+            font-size: 35px;
             font-weight: bold;
         }
 
         .stat-label {
             color: #666;
-            font-size: 11px;
+            font-size: 10px;
         }
+
 
         /* =========================
            EXPERIENCE
@@ -251,9 +345,13 @@
 
         .experience-item {
             border-top: 1px solid #222;
+
             padding: 30px 0;
+
             display: grid;
+
             grid-template-columns: 180px 1fr;
+
             gap: 30px;
         }
 
@@ -269,22 +367,30 @@
 
         .experience-content ul {
             list-style: none;
+
             color: #777;
+
             font-family: Arial, sans-serif;
         }
 
         .experience-content li {
             margin-bottom: 14px;
+
             padding-left: 20px;
+
             position: relative;
         }
 
         .experience-content li::before {
             content: ">";
+
             position: absolute;
+
             left: 0;
+
             color: #aaa;
         }
+
 
         /* =========================
            SKILLS
@@ -292,14 +398,19 @@
 
         .skills {
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 12px;
         }
 
         .skill {
             border: 1px solid #333;
+
             padding: 13px 18px;
+
             color: #999;
+
             transition: 0.3s;
         }
 
@@ -308,80 +419,108 @@
             color: black;
         }
 
+
         /* =========================
            EDUCATION TIMELINE
         ========================= */
 
         .timeline {
             position: relative;
+
             max-width: 1000px;
+
             margin-left: 20px;
         }
 
         .timeline::before {
             content: "";
+
             position: absolute;
+
             left: 0;
+
             top: 0;
+
             bottom: 0;
+
             width: 1px;
+
             background: #333;
         }
 
         .timeline-item {
             position: relative;
+
             padding: 0 0 55px 45px;
         }
 
         .timeline-item::before {
             content: "";
+
             position: absolute;
+
             left: -5px;
+
             top: 5px;
 
             width: 10px;
             height: 10px;
 
             background: #050505;
+
             border: 1px solid #aaa;
+
             border-radius: 50%;
         }
 
         .timeline-date {
             color: #555;
+
             font-size: 12px;
+
             margin-bottom: 10px;
         }
 
         .timeline-item h3 {
             font-size: 22px;
+
             margin-bottom: 5px;
         }
 
         .timeline-item h4 {
             color: #888;
+
             font-size: 14px;
+
             margin-bottom: 15px;
         }
 
         .timeline-item ul {
             color: #777;
+
             font-family: Arial, sans-serif;
+
             list-style: none;
         }
 
         .timeline-item li {
             margin-bottom: 7px;
+
             padding-left: 18px;
+
             position: relative;
         }
 
         .timeline-item li::before {
             content: "•";
+
             position: absolute;
+
             left: 0;
+
             color: #999;
         }
+
 
         /* =========================
            ACHIEVEMENTS
@@ -389,9 +528,13 @@
 
         .achievement {
             border-bottom: 1px solid #222;
+
             padding: 25px 0;
+
             display: flex;
+
             justify-content: space-between;
+
             gap: 20px;
         }
 
@@ -401,13 +544,18 @@
 
         .achievement p {
             color: #666;
+
             font-family: Arial, sans-serif;
+
             font-size: 13px;
+
+            max-width: 750px;
         }
 
         .achievement-number {
             color: #555;
         }
+
 
         /* =========================
            CONTACT
@@ -415,23 +563,33 @@
 
         .contact {
             min-height: 70vh;
+
             display: flex;
+
             flex-direction: column;
+
             justify-content: center;
         }
 
         .contact h2 {
             font-size: clamp(40px, 8vw, 100px);
+
             letter-spacing: -4px;
+
             line-height: 0.95;
+
             max-width: 900px;
         }
 
         .contact-info {
             margin-top: 50px;
+
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 30px;
+
             color: #777;
         }
 
@@ -439,20 +597,25 @@
             color: white;
         }
 
+
         /* =========================
            FOOTER
         ========================= */
 
         footer {
             border-top: 1px solid #222;
+
             padding: 30px 7%;
 
             display: flex;
+
             justify-content: space-between;
 
             color: #555;
+
             font-size: 12px;
         }
+
 
         /* =========================
            MOBILE
@@ -474,6 +637,7 @@
 
             .hero h1 {
                 font-size: 65px;
+
                 letter-spacing: -3px;
             }
 
@@ -481,36 +645,69 @@
                 padding: 80px 5%;
             }
 
+            /* PROFILE ON PHONE */
+
             .profile-grid {
                 grid-template-columns: 1fr;
+
+                gap: 45px;
+            }
+
+            .profile-photo {
+                width: 100%;
+
+                display: flex;
+
+                justify-content: center;
+            }
+
+            .profile-photo img {
+                width: min(320px, 90vw);
+
+                height: 390px;
             }
 
             .stats {
                 margin-top: 20px;
             }
 
+            /* EXPERIENCE */
+
             .experience-item {
                 grid-template-columns: 1fr;
+
                 gap: 10px;
             }
+
+            /* EDUCATION */
 
             .timeline {
                 margin-left: 10px;
             }
 
+            /* ACHIEVEMENTS */
+
             .achievement {
                 flex-direction: column;
             }
 
+            /* FOOTER */
+
             footer {
                 flex-direction: column;
+
                 gap: 10px;
             }
+
         }
+
     </style>
+
 </head>
 
+
 <body>
+
 
     <!-- =========================
          NAVIGATION
@@ -523,15 +720,35 @@
         </div>
 
         <ul>
-            <li><a href="#profile">PROFILE</a></li>
-            <li><a href="#experience">EXPERIENCE</a></li>
-            <li><a href="#skills">SKILLS</a></li>
-            <li><a href="#education">EDUCATION</a></li>
-            <li><a href="#achievements">ACHIEVEMENTS</a></li>
-            <li><a href="#contact">CONTACT</a></li>
+
+            <li>
+                <a href="#profile">PROFILE</a>
+            </li>
+
+            <li>
+                <a href="#experience">EXPERIENCE</a>
+            </li>
+
+            <li>
+                <a href="#skills">SKILLS</a>
+            </li>
+
+            <li>
+                <a href="#education">EDUCATION</a>
+            </li>
+
+            <li>
+                <a href="#achievements">ACHIEVEMENTS</a>
+            </li>
+
+            <li>
+                <a href="#contact">CONTACT</a>
+            </li>
+
         </ul>
 
     </nav>
+
 
 
     <!-- =========================
@@ -543,33 +760,52 @@
         <div class="hero-content">
 
             <div class="terminal">
+
                 &gt; SYSTEM STATUS:
+
                 <span>ONLINE</span>
+
             </div>
+
 
             <h1>
+
                 ISIAH<br>
+
                 <span>AGUS</span>
+
             </h1>
 
+
             <div class="hero-title">
+
                 CIVIL ENGINEERING STUDENT
+
             </div>
 
+
             <p class="hero-description">
+
                 A dedicated Civil Engineering student with a strong STEM
                 background, a passion for problem-solving, and an interest
                 in structural design and real-world engineering applications.
+
             </p>
+
 
             <div class="buttons">
 
                 <a href="#profile" class="button primary">
+
                     ENTER PORTFOLIO
+
                 </a>
 
+
                 <a href="#contact" class="button">
+
                     CONTACT ME
+
                 </a>
 
             </div>
@@ -579,6 +815,7 @@
     </header>
 
 
+
     <!-- =========================
          PROFILE
     ========================= -->
@@ -586,66 +823,139 @@
     <section id="profile">
 
         <div class="section-number">
+
             // PROFILE / 001
+
         </div>
 
+
         <h2 class="section-title">
+
             PROFILE
+
         </h2>
+
 
         <div class="profile-grid">
 
-            <div class="profile-text">
 
-                <p>
-                    I am a dedicated Civil Engineering student at Isabela
-                    State University with a strong STEM background and a
-                    consistent drive to grow academically and professionally.
-                </p>
+            <!-- PHOTO -->
 
-                <p>
-                    I enjoy solving problems, understanding how structures
-                    are designed, and applying what I learn to real-world
-                    engineering situations.
-                </p>
+            <div class="profile-photo">
 
-                <p>
-                    I am detail-oriented, analytical, and eager to learn,
-                    with a strong commitment to doing my best in both
-                    academic work and team projects.
-                </p>
+                <img
+                    src="profile.png"
+                    alt="Isiah Agus - Civil Engineering Student"
+                >
 
             </div>
 
 
-            <div class="stats">
+            <!-- INFORMATION -->
 
-                <div class="stat">
-                    <div class="stat-number">BSCE</div>
-                    <div class="stat-label">
-                        CIVIL ENGINEERING
-                    </div>
-                </div>
+            <div class="profile-text">
 
-                <div class="stat">
-                    <div class="stat-number">STEM</div>
-                    <div class="stat-label">
-                        ACADEMIC BACKGROUND
-                    </div>
-                </div>
 
-                <div class="stat">
-                    <div class="stat-number">2025</div>
-                    <div class="stat-label">
-                        STARTED BSCE
-                    </div>
-                </div>
+                <p>
 
-                <div class="stat">
-                    <div class="stat-number">∞</div>
-                    <div class="stat-label">
-                        WILLINGNESS TO LEARN
+                    I am a dedicated Civil Engineering student at Isabela
+                    State University with a strong STEM background and a
+                    consistent drive to grow academically and professionally.
+
+                </p>
+
+
+                <p>
+
+                    I enjoy solving problems, understanding how structures
+                    are designed, and applying what I learn to real-world
+                    engineering situations.
+
+                </p>
+
+
+                <p>
+
+                    I am detail-oriented, analytical, and eager to learn,
+                    with a strong commitment to doing my best in both
+                    academic work and team projects.
+
+                </p>
+
+
+                <!-- STATS -->
+
+                <div class="stats">
+
+
+                    <div class="stat">
+
+                        <div class="stat-number">
+
+                            BSCE
+
+                        </div>
+
+                        <div class="stat-label">
+
+                            CIVIL ENGINEERING
+
+                        </div>
+
                     </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-number">
+
+                            STEM
+
+                        </div>
+
+                        <div class="stat-label">
+
+                            ACADEMIC BACKGROUND
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-number">
+
+                            2025
+
+                        </div>
+
+                        <div class="stat-label">
+
+                            STARTED BSCE
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-number">
+
+                            ∞
+
+                        </div>
+
+                        <div class="stat-label">
+
+                            WILLINGNESS TO LEARN
+
+                        </div>
+
+                    </div>
+
+
                 </div>
 
             </div>
@@ -655,6 +965,7 @@
     </section>
 
 
+
     <!-- =========================
          EXPERIENCE
     ========================= -->
@@ -662,50 +973,73 @@
     <section id="experience">
 
         <div class="section-number">
+
             // EXPERIENCE / 002
+
         </div>
 
+
         <h2 class="section-title">
+
             EXPERIENCE
+
         </h2>
 
 
         <div class="experience-item">
 
+
             <div class="experience-year">
+
                 ENGINEERING
+
             </div>
+
 
             <div class="experience-content">
 
                 <h3>
+
                     Field & Technical Experience
+
                 </h3>
+
 
                 <ul>
 
                     <li>
+
                         Joined engineers during site visits to observe
                         ongoing canal and road construction, as well as
                         structural maintenance work.
+
                     </li>
 
+
                     <li>
+
                         Practiced creating 2D structural layouts, canal
                         cross-sections, and site plan modifications in
                         AutoCAD based on actual engineering requirements.
+
                     </li>
 
+
                     <li>
+
                         Reviewed technical drawings and topographic maps
                         to better understand how plans correspond to
                         actual site conditions and measurements.
+
                     </li>
 
+
                     <li>
+
                         Observed safety practices, surveying procedures,
                         and the documentation process used in public
                         works projects.
+
                     </li>
 
                 </ul>
@@ -717,6 +1051,7 @@
     </section>
 
 
+
     <!-- =========================
          SKILLS
     ========================= -->
@@ -724,50 +1059,82 @@
     <section id="skills">
 
         <div class="section-number">
+
             // CAPABILITIES / 003
+
         </div>
 
+
         <h2 class="section-title">
+
             CAPABILITIES
+
         </h2>
+
 
         <div class="skills">
 
+
             <div class="skill">
+
                 COMMUNICATION
+
             </div>
 
+
             <div class="skill">
+
                 CRITICAL THINKING
+
             </div>
 
+
             <div class="skill">
+
                 PROBLEM SOLVING
+
             </div>
 
+
             <div class="skill">
+
                 SITE INSPECTION
+
             </div>
 
+
             <div class="skill">
+
                 DOCUMENTATION
+
             </div>
 
+
             <div class="skill">
+
                 ORGANIZATION
+
             </div>
 
+
             <div class="skill">
+
                 TASK MANAGEMENT
+
             </div>
 
+
             <div class="skill">
+
                 AUTOCAD
+
             </div>
+
 
         </div>
 
     </section>
+
 
 
     <!-- =========================
@@ -777,11 +1144,16 @@
     <section id="education">
 
         <div class="section-number">
+
             // EDUCATION / 004
+
         </div>
 
+
         <h2 class="section-title">
+
             EDUCATION
+
         </h2>
 
 
@@ -793,26 +1165,38 @@
             <div class="timeline-item">
 
                 <div class="timeline-date">
+
                     AUG 2025 — PRESENT
+
                 </div>
 
+
                 <h3>
+
                     Isabela State University — Echague
+
                 </h3>
 
+
                 <h4>
+
                     College of Engineering
+
                 </h4>
+
 
                 <ul>
 
                     <li>
+
                         Bachelor of Science in Civil Engineering (BSCE)
+
                     </li>
 
                 </ul>
 
             </div>
+
 
 
             <!-- SENIOR HIGH -->
@@ -820,41 +1204,62 @@
             <div class="timeline-item">
 
                 <div class="timeline-date">
+
                     AUG 2023 — APR 2025
+
                 </div>
 
+
                 <h3>
+
                     Palayan Region High School
+
                 </h3>
 
+
                 <h4>
+
                     Senior High School Department — STEM
+
                 </h4>
+
 
                 <ul>
 
                     <li>
+
                         Science, Technology, Engineering, and Mathematics
                         (STEM)
+
                     </li>
 
+
                     <li>
+
                         Senior High School Diploma — April 2025
+
                     </li>
 
+
                     <li>
+
                         With High Honors — 1st, 2nd, 3rd, and 4th Quarter,
                         A.Y. 2024–2025
+
                     </li>
 
+
                     <li>
+
                         With High Honors — 1st, 2nd, 3rd, and 4th Quarter,
                         A.Y. 2023–2024
+
                     </li>
 
                 </ul>
 
             </div>
+
 
 
             <!-- JUNIOR HIGH -->
@@ -862,37 +1267,60 @@
             <div class="timeline-item">
 
                 <div class="timeline-date">
+
                     JUNE 2019 — JULY 2023
+
                 </div>
 
+
                 <h3>
+
                     Palayan Region High School
+
                 </h3>
 
+
                 <h4>
+
                     Junior High School
+
                 </h4>
+
 
                 <ul>
 
                     <li>
+
                         Junior High School Diploma — July 2023
+
                     </li>
 
+
                     <li>
+
                         With Honors — A.Y. 2019–2020
+
                     </li>
 
+
                     <li>
+
                         With Honors — A.Y. 2020–2021
+
                     </li>
 
+
                     <li>
+
                         With Honors — A.Y. 2021–2022
+
                     </li>
 
+
                     <li>
+
                         With Honors — A.Y. 2022–2023
+
                     </li>
 
                 </ul>
@@ -900,42 +1328,66 @@
             </div>
 
 
+
             <!-- ELEMENTARY -->
 
             <div class="timeline-item">
 
                 <div class="timeline-date">
+
                     JUNE 2013 — JUNE 2019
+
                 </div>
 
+
                 <h3>
+
                     Bagnos Elementary School
+
                 </h3>
 
+
                 <h4>
+
                     Elementary
+
                 </h4>
+
 
                 <ul>
 
                     <li>
+
                         Elementary Diploma — April 2019
+
                     </li>
 
+
                     <li>
+
                         With Honors — A.Y. 2015–2016
+
                     </li>
 
+
                     <li>
+
                         With Honors — A.Y. 2016–2017
+
                     </li>
 
+
                     <li>
+
                         With Honors — A.Y. 2017–2018
+
                     </li>
 
+
                     <li>
+
                         With Honors — A.Y. 2018–2019
+
                     </li>
 
                 </ul>
@@ -945,6 +1397,7 @@
         </div>
 
     </section>
+
 
 
     <!-- =========================
@@ -954,11 +1407,16 @@
     <section id="achievements">
 
         <div class="section-number">
+
             // ACHIEVEMENTS / 005
+
         </div>
 
+
         <h2 class="section-title">
+
             ACHIEVEMENTS
+
         </h2>
 
 
@@ -967,21 +1425,29 @@
             <div>
 
                 <h3>
+
                     Consistent Academic Achievement
+
                 </h3>
 
                 <p>
+
                     Maintained strong academic performance throughout
                     junior and senior high school.
+
                 </p>
 
             </div>
 
+
             <div class="achievement-number">
+
                 001
+
             </div>
 
         </div>
+
 
 
         <div class="achievement">
@@ -989,21 +1455,29 @@
             <div>
 
                 <h3>
+
                     With High Honors
+
                 </h3>
 
                 <p>
+
                     Achieved With High Honors in all four quarters during
                     A.Y. 2023–2024 and A.Y. 2024–2025.
+
                 </p>
 
             </div>
 
+
             <div class="achievement-number">
+
                 002
+
             </div>
 
         </div>
+
 
 
         <div class="achievement">
@@ -1011,21 +1485,29 @@
             <div>
 
                 <h3>
+
                     With Honors
+
                 </h3>
 
                 <p>
+
                     Consistently earned With Honors throughout junior
                     high school from A.Y. 2019–2020 to 2022–2023.
+
                 </p>
 
             </div>
 
+
             <div class="achievement-number">
+
                 003
+
             </div>
 
         </div>
+
 
 
         <div class="achievement">
@@ -1033,24 +1515,32 @@
             <div>
 
                 <h3>
+
                     Engineering Field Exposure
+
                 </h3>
 
                 <p>
+
                     Gained practical exposure to construction, surveying,
                     AutoCAD drafting, site inspection, and project
                     documentation.
+
                 </p>
 
             </div>
 
+
             <div class="achievement-number">
+
                 004
+
             </div>
 
         </div>
 
     </section>
+
 
 
     <!-- =========================
@@ -1060,30 +1550,41 @@
     <section id="contact" class="contact">
 
         <div class="section-number">
+
             // CONTACT / 006
+
         </div>
 
+
         <h2>
+
             LET'S BUILD<br>
             SOMETHING<br>
             MEANINGFUL.
+
         </h2>
 
 
         <div class="contact-info">
 
-            <!-- CHANGE THESE LATER -->
-
             <a href="mailto:YOUR_EMAIL@gmail.com">
+
                 EMAIL
+
             </a>
 
+
             <a href="#">
+
                 LINKEDIN
+
             </a>
 
+
             <a href="#">
+
                 FACEBOOK
+
             </a>
 
         </div>
@@ -1091,13 +1592,20 @@
 
         <div class="buttons">
 
-            <a href="resume.pdf" class="button primary" download>
+            <a
+                href="resume.pdf"
+                class="button primary"
+                download
+            >
+
                 DOWNLOAD RESUME
+
             </a>
 
         </div>
 
     </section>
+
 
 
     <!-- =========================
@@ -1107,11 +1615,16 @@
     <footer>
 
         <div>
+
             ISIAH_AGUS // PORTFOLIO
+
         </div>
 
+
         <div>
+
             CIVIL ENGINEERING
+
         </div>
 
     </footer>
